@@ -8,17 +8,6 @@ scr.title(titlestring="Snake Game")
 scr.bgcolor("black")
 scr.tracer(0)
 
-# tim = Turtle(shape="square")
-# tim.color("white")
-# print(tim.resizemode())
-# print(tim.shapesize())
-# tim.resizemode("user")
-# tim.shapesize(0.2, 0.2, 1)
-# tim.pu()
-# for x in range(0, 3):
-#     tim.fd(5)
-#     tim.stamp()
-
 snake = Snake()
 
 scr.listen()
