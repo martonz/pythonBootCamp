@@ -19,12 +19,18 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-            tim = Turtle(shape="square")
-            tim.color("white")
-            # tim.speed("fastest")
-            tim.pu()
-            tim.goto(position)
-            self.segments.append(tim)
+            self.add_segment(position)
+
+    def add_segment(self, position):
+        tim = Turtle(shape="square")
+        tim.color("white")
+        # tim.speed("fastest")
+        tim.pu()
+        tim.goto(position)
+        self.segments.append(tim)
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         """Move Snake"""
